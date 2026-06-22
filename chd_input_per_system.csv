@@ -1,0 +1,390 @@
+gene,ref_aa,position,alt_aa,AlphaMissense,AlphaMissense_pathogenicity,franklin,system
+shroom3,G,35,V,likely_pathogenic,0.8766,VUS (mid),shroom3_actin
+shroom3,G,35,V,likely_pathogenic,0.8766,VUS (mid),shroom3_dvl2
+shroom3,G,35,V,likely_pathogenic,0.8766,VUS (mid),shroom3_ctnnb1
+shroom3,G,35,V,likely_pathogenic,0.8766,VUS (mid),shroom3_rock2
+shroom3,G,35,V,likely_pathogenic,0.8766,VUS (mid),shroom3_cdh2_cyto
+shroom3,G,60,V,likely_pathogenic,0.7298,benign,shroom3_actin
+shroom3,G,60,V,likely_pathogenic,0.7298,benign,shroom3_dvl2
+shroom3,G,60,V,likely_pathogenic,0.7298,benign,shroom3_ctnnb1
+shroom3,G,60,V,likely_pathogenic,0.7298,benign,shroom3_rock2
+shroom3,G,60,V,likely_pathogenic,0.7298,benign,shroom3_cdh2_cyto
+shroom3,V,106,L,likely_pathogenic,0.6178,VUS (low),shroom3_actin
+shroom3,V,106,L,likely_pathogenic,0.6178,VUS (low),shroom3_dvl2
+shroom3,V,106,L,likely_pathogenic,0.6178,VUS (low),shroom3_ctnnb1
+shroom3,V,106,L,likely_pathogenic,0.6178,VUS (low),shroom3_rock2
+shroom3,V,106,L,likely_pathogenic,0.6178,VUS (low),shroom3_cdh2_cyto
+shroom3,L,147,H,likely_benign,0.2264,benign,shroom3_actin
+shroom3,L,147,H,likely_benign,0.2264,benign,shroom3_dvl2
+shroom3,L,147,H,likely_benign,0.2264,benign,shroom3_ctnnb1
+shroom3,L,147,H,likely_benign,0.2264,benign,shroom3_rock2
+shroom3,L,147,H,likely_benign,0.2264,benign,shroom3_cdh2_cyto
+shroom3,H,161,Q,ambiguous,0.4151,VUS (mid),shroom3_actin
+shroom3,H,161,Q,ambiguous,0.4151,VUS (mid),shroom3_dvl2
+shroom3,H,161,Q,ambiguous,0.4151,VUS (mid),shroom3_ctnnb1
+shroom3,H,161,Q,ambiguous,0.4151,VUS (mid),shroom3_rock2
+shroom3,H,161,Q,ambiguous,0.4151,VUS (mid),shroom3_cdh2_cyto
+shroom3,H,207,Y,likely_benign,0.1432,Benign,shroom3_actin
+shroom3,H,207,Y,likely_benign,0.1432,Benign,shroom3_dvl2
+shroom3,H,207,Y,likely_benign,0.1432,Benign,shroom3_ctnnb1
+shroom3,H,207,Y,likely_benign,0.1432,Benign,shroom3_rock2
+shroom3,H,207,Y,likely_benign,0.1432,Benign,shroom3_cdh2_cyto
+shroom3,G,279,A,likely_benign,0.0904,benign,shroom3_actin
+shroom3,G,279,A,likely_benign,0.0904,benign,shroom3_dvl2
+shroom3,G,279,A,likely_benign,0.0904,benign,shroom3_ctnnb1
+shroom3,G,279,A,likely_benign,0.0904,benign,shroom3_rock2
+shroom3,G,279,A,likely_benign,0.0904,benign,shroom3_cdh2_cyto
+shroom3,S,325,A,likely_benign,0.0894,Benign,shroom3_actin
+shroom3,S,325,A,likely_benign,0.0894,Benign,shroom3_dvl2
+shroom3,S,325,A,likely_benign,0.0894,Benign,shroom3_ctnnb1
+shroom3,S,325,A,likely_benign,0.0894,Benign,shroom3_rock2
+shroom3,S,325,A,likely_benign,0.0894,Benign,shroom3_cdh2_cyto
+shroom3,R,352,Q,likely_benign,0.1142,likely benign,shroom3_actin
+shroom3,R,352,Q,likely_benign,0.1142,likely benign,shroom3_dvl2
+shroom3,R,352,Q,likely_benign,0.1142,likely benign,shroom3_ctnnb1
+shroom3,R,352,Q,likely_benign,0.1142,likely benign,shroom3_rock2
+shroom3,R,352,Q,likely_benign,0.1142,likely benign,shroom3_cdh2_cyto
+shroom3,S,367,R,likely_benign,0.3073,likely benign,shroom3_actin
+shroom3,S,367,R,likely_benign,0.3073,likely benign,shroom3_dvl2
+shroom3,S,367,R,likely_benign,0.3073,likely benign,shroom3_ctnnb1
+shroom3,S,367,R,likely_benign,0.3073,likely benign,shroom3_rock2
+shroom3,S,367,R,likely_benign,0.3073,likely benign,shroom3_cdh2_cyto
+shroom3,L,376,I,likely_benign,0.0829,VUS (mid),shroom3_actin
+shroom3,L,376,I,likely_benign,0.0829,VUS (mid),shroom3_dvl2
+shroom3,L,376,I,likely_benign,0.0829,VUS (mid),shroom3_ctnnb1
+shroom3,L,376,I,likely_benign,0.0829,VUS (mid),shroom3_rock2
+shroom3,L,376,I,likely_benign,0.0829,VUS (mid),shroom3_cdh2_cyto
+shroom3,T,434,A,likely_benign,0.1333,VUS (mid),shroom3_actin
+shroom3,T,434,A,likely_benign,0.1333,VUS (mid),shroom3_dvl2
+shroom3,T,434,A,likely_benign,0.1333,VUS (mid),shroom3_ctnnb1
+shroom3,T,434,A,likely_benign,0.1333,VUS (mid),shroom3_rock2
+shroom3,T,434,A,likely_benign,0.1333,VUS (mid),shroom3_cdh2_cyto
+shroom3,K,449,R,likely_benign,0.0894,VUS (mid),shroom3_actin
+shroom3,K,449,R,likely_benign,0.0894,VUS (mid),shroom3_dvl2
+shroom3,K,449,R,likely_benign,0.0894,VUS (mid),shroom3_ctnnb1
+shroom3,K,449,R,likely_benign,0.0894,VUS (mid),shroom3_rock2
+shroom3,K,449,R,likely_benign,0.0894,VUS (mid),shroom3_cdh2_cyto
+shroom3,P,469,A,likely_benign,0.065,Benign,shroom3_actin
+shroom3,P,469,A,likely_benign,0.065,Benign,shroom3_dvl2
+shroom3,P,469,A,likely_benign,0.065,Benign,shroom3_ctnnb1
+shroom3,P,469,A,likely_benign,0.065,Benign,shroom3_rock2
+shroom3,P,469,A,likely_benign,0.065,Benign,shroom3_cdh2_cyto
+shroom3,E,564,A,likely_benign,0.1464,Benign,shroom3_actin
+shroom3,E,564,A,likely_benign,0.1464,Benign,shroom3_dvl2
+shroom3,E,564,A,likely_benign,0.1464,Benign,shroom3_ctnnb1
+shroom3,E,564,A,likely_benign,0.1464,Benign,shroom3_rock2
+shroom3,E,564,A,likely_benign,0.1464,Benign,shroom3_cdh2_cyto
+shroom3,S,597,Y,likely_benign,0.0741,VUS (mid),shroom3_actin
+shroom3,S,597,Y,likely_benign,0.0741,VUS (mid),shroom3_dvl2
+shroom3,S,597,Y,likely_benign,0.0741,VUS (mid),shroom3_ctnnb1
+shroom3,S,597,Y,likely_benign,0.0741,VUS (mid),shroom3_rock2
+shroom3,S,597,Y,likely_benign,0.0741,VUS (mid),shroom3_cdh2_cyto
+shroom3,L,647,P,likely_benign,0.0636,VUS(mid),shroom3_actin
+shroom3,L,647,P,likely_benign,0.0636,VUS(mid),shroom3_dvl2
+shroom3,L,647,P,likely_benign,0.0636,VUS(mid),shroom3_ctnnb1
+shroom3,L,647,P,likely_benign,0.0636,VUS(mid),shroom3_rock2
+shroom3,L,647,P,likely_benign,0.0636,VUS(mid),shroom3_cdh2_cyto
+shroom3,K,707,R,likely_benign,0.0943,Likely benign,shroom3_actin
+shroom3,K,707,R,likely_benign,0.0943,Likely benign,shroom3_dvl2
+shroom3,K,707,R,likely_benign,0.0943,Likely benign,shroom3_ctnnb1
+shroom3,K,707,R,likely_benign,0.0943,Likely benign,shroom3_rock2
+shroom3,K,707,R,likely_benign,0.0943,Likely benign,shroom3_cdh2_cyto
+shroom3,R,718,Q,likely_benign,0.095,benign,shroom3_actin
+shroom3,R,718,Q,likely_benign,0.095,benign,shroom3_dvl2
+shroom3,R,718,Q,likely_benign,0.095,benign,shroom3_ctnnb1
+shroom3,R,718,Q,likely_benign,0.095,benign,shroom3_rock2
+shroom3,R,718,Q,likely_benign,0.095,benign,shroom3_cdh2_cyto
+shroom3,Q,793,P,likely_benign,0.1164,likely benign,shroom3_actin
+shroom3,Q,793,P,likely_benign,0.1164,likely benign,shroom3_dvl2
+shroom3,Q,793,P,likely_benign,0.1164,likely benign,shroom3_ctnnb1
+shroom3,Q,793,P,likely_benign,0.1164,likely benign,shroom3_rock2
+shroom3,Q,793,P,likely_benign,0.1164,likely benign,shroom3_cdh2_cyto
+shroom3,G,869,R,likely_benign,0.0819,likely benign,shroom3_actin
+shroom3,G,869,R,likely_benign,0.0819,likely benign,shroom3_dvl2
+shroom3,G,869,R,likely_benign,0.0819,likely benign,shroom3_ctnnb1
+shroom3,G,869,R,likely_benign,0.0819,likely benign,shroom3_rock2
+shroom3,G,869,R,likely_benign,0.0819,likely benign,shroom3_cdh2_cyto
+shroom3,D,945,V,likely_pathogenic,0.8322,VUS (mid),shroom3_actin
+shroom3,D,945,V,likely_pathogenic,0.8322,VUS (mid),shroom3_dvl2
+shroom3,D,945,V,likely_pathogenic,0.8322,VUS (mid),shroom3_ctnnb1
+shroom3,D,945,V,likely_pathogenic,0.8322,VUS (mid),shroom3_rock2
+shroom3,D,945,V,likely_pathogenic,0.8322,VUS (mid),shroom3_cdh2_cyto
+shroom3,R,1008,H,ambiguous,0.438,VUS (mid),shroom3_actin
+shroom3,R,1008,H,ambiguous,0.438,VUS (mid),shroom3_dvl2
+shroom3,R,1008,H,ambiguous,0.438,VUS (mid),shroom3_ctnnb1
+shroom3,R,1008,H,ambiguous,0.438,VUS (mid),shroom3_rock2
+shroom3,R,1008,H,ambiguous,0.438,VUS (mid),shroom3_cdh2_cyto
+shroom3,T,1012,N,likely_benign,0.2017,benign,shroom3_actin
+shroom3,T,1012,N,likely_benign,0.2017,benign,shroom3_dvl2
+shroom3,T,1012,N,likely_benign,0.2017,benign,shroom3_ctnnb1
+shroom3,T,1012,N,likely_benign,0.2017,benign,shroom3_rock2
+shroom3,T,1012,N,likely_benign,0.2017,benign,shroom3_cdh2_cyto
+shroom3,V,1054,L,ambiguous,0.436,benign,shroom3_actin
+shroom3,V,1054,L,ambiguous,0.436,benign,shroom3_dvl2
+shroom3,V,1054,L,ambiguous,0.436,benign,shroom3_ctnnb1
+shroom3,V,1054,L,ambiguous,0.436,benign,shroom3_rock2
+shroom3,V,1054,L,ambiguous,0.436,benign,shroom3_cdh2_cyto
+shroom3,R,1250,C,likely_benign,0.0899,VUS(mid),shroom3_actin
+shroom3,R,1250,C,likely_benign,0.0899,VUS(mid),shroom3_dvl2
+shroom3,R,1250,C,likely_benign,0.0899,VUS(mid),shroom3_ctnnb1
+shroom3,R,1250,C,likely_benign,0.0899,VUS(mid),shroom3_rock2
+shroom3,R,1250,C,likely_benign,0.0899,VUS(mid),shroom3_cdh2_cyto
+shroom3,P,1290,L,likely_benign,0.0836,benign,shroom3_actin
+shroom3,P,1290,L,likely_benign,0.0836,benign,shroom3_dvl2
+shroom3,P,1290,L,likely_benign,0.0836,benign,shroom3_ctnnb1
+shroom3,P,1290,L,likely_benign,0.0836,benign,shroom3_rock2
+shroom3,P,1290,L,likely_benign,0.0836,benign,shroom3_cdh2_cyto
+shroom3,R,1430,Q,likely_benign,0.0796,benign,shroom3_actin
+shroom3,R,1430,Q,likely_benign,0.0796,benign,shroom3_dvl2
+shroom3,R,1430,Q,likely_benign,0.0796,benign,shroom3_ctnnb1
+shroom3,R,1430,Q,likely_benign,0.0796,benign,shroom3_rock2
+shroom3,R,1430,Q,likely_benign,0.0796,benign,shroom3_cdh2_cyto
+shroom3,P,1464,S,likely_benign,0.1087,VUS (low),shroom3_actin
+shroom3,P,1464,S,likely_benign,0.1087,VUS (low),shroom3_dvl2
+shroom3,P,1464,S,likely_benign,0.1087,VUS (low),shroom3_ctnnb1
+shroom3,P,1464,S,likely_benign,0.1087,VUS (low),shroom3_rock2
+shroom3,P,1464,S,likely_benign,0.1087,VUS (low),shroom3_cdh2_cyto
+shroom3,T,1481,P,likely_benign,0.0701,benign,shroom3_actin
+shroom3,T,1481,P,likely_benign,0.0701,benign,shroom3_dvl2
+shroom3,T,1481,P,likely_benign,0.0701,benign,shroom3_ctnnb1
+shroom3,T,1481,P,likely_benign,0.0701,benign,shroom3_rock2
+shroom3,T,1481,P,likely_benign,0.0701,benign,shroom3_cdh2_cyto
+shroom3,E,1507,K,likely_benign,0.2644,likely benign,shroom3_actin
+shroom3,E,1507,K,likely_benign,0.2644,likely benign,shroom3_dvl2
+shroom3,E,1507,K,likely_benign,0.2644,likely benign,shroom3_ctnnb1
+shroom3,E,1507,K,likely_benign,0.2644,likely benign,shroom3_rock2
+shroom3,E,1507,K,likely_benign,0.2644,likely benign,shroom3_cdh2_cyto
+shroom3,A,1557,V,likely_benign,0.086,benign,shroom3_actin
+shroom3,A,1557,V,likely_benign,0.086,benign,shroom3_dvl2
+shroom3,A,1557,V,likely_benign,0.086,benign,shroom3_ctnnb1
+shroom3,A,1557,V,likely_benign,0.086,benign,shroom3_rock2
+shroom3,A,1557,V,likely_benign,0.086,benign,shroom3_cdh2_cyto
+shroom3,Q,1558,P,likely_benign,0.0666,benign,shroom3_actin
+shroom3,Q,1558,P,likely_benign,0.0666,benign,shroom3_dvl2
+shroom3,Q,1558,P,likely_benign,0.0666,benign,shroom3_ctnnb1
+shroom3,Q,1558,P,likely_benign,0.0666,benign,shroom3_rock2
+shroom3,Q,1558,P,likely_benign,0.0666,benign,shroom3_cdh2_cyto
+shroom3,M,1585,K,likely_benign,0.118,benign,shroom3_actin
+shroom3,M,1585,K,likely_benign,0.118,benign,shroom3_dvl2
+shroom3,M,1585,K,likely_benign,0.118,benign,shroom3_ctnnb1
+shroom3,M,1585,K,likely_benign,0.118,benign,shroom3_rock2
+shroom3,M,1585,K,likely_benign,0.118,benign,shroom3_cdh2_cyto
+shroom3,V,1620,I,likely_benign,0.0782,VUS (low),shroom3_actin
+shroom3,V,1620,I,likely_benign,0.0782,VUS (low),shroom3_dvl2
+shroom3,V,1620,I,likely_benign,0.0782,VUS (low),shroom3_ctnnb1
+shroom3,V,1620,I,likely_benign,0.0782,VUS (low),shroom3_rock2
+shroom3,V,1620,I,likely_benign,0.0782,VUS (low),shroom3_cdh2_cyto
+shroom3,Q,1623,K,likely_benign,0.1133,likely benign,shroom3_actin
+shroom3,Q,1623,K,likely_benign,0.1133,likely benign,shroom3_dvl2
+shroom3,Q,1623,K,likely_benign,0.1133,likely benign,shroom3_ctnnb1
+shroom3,Q,1623,K,likely_benign,0.1133,likely benign,shroom3_rock2
+shroom3,Q,1623,K,likely_benign,0.1133,likely benign,shroom3_cdh2_cyto
+shroom3,G,1864,D,likely_benign,0.273,benign,shroom3_actin
+shroom3,G,1864,D,likely_benign,0.273,benign,shroom3_dvl2
+shroom3,G,1864,D,likely_benign,0.273,benign,shroom3_ctnnb1
+shroom3,G,1864,D,likely_benign,0.273,benign,shroom3_rock2
+shroom3,G,1864,D,likely_benign,0.273,benign,shroom3_cdh2_cyto
+shroom3,P,1971,L,likely_benign,0.0869,VUS (mid),shroom3_actin
+shroom3,P,1971,L,likely_benign,0.0869,VUS (mid),shroom3_dvl2
+shroom3,P,1971,L,likely_benign,0.0869,VUS (mid),shroom3_ctnnb1
+shroom3,P,1971,L,likely_benign,0.0869,VUS (mid),shroom3_rock2
+shroom3,P,1971,L,likely_benign,0.0869,VUS (mid),shroom3_cdh2_cyto
+shroom3,N,1972,D,likely_benign,0.0529,benign,shroom3_actin
+shroom3,N,1972,D,likely_benign,0.0529,benign,shroom3_dvl2
+shroom3,N,1972,D,likely_benign,0.0529,benign,shroom3_ctnnb1
+shroom3,N,1972,D,likely_benign,0.0529,benign,shroom3_rock2
+shroom3,N,1972,D,likely_benign,0.0529,benign,shroom3_cdh2_cyto
+rock2,R,35,G,likely_benign,0.2286,likely benign,shroom3_rock2
+rock2,I,41,V,likely_benign,0.0535,likely benign,shroom3_rock2
+rock2,F,136,C,likely_pathogenic,0.9536,likely benign,shroom3_rock2
+rock2,T,367,M,likely_benign,0.0722,VUS (high),shroom3_rock2
+rock2,T,431,N,likely_benign,0.0558,benign,shroom3_rock2
+rock2,N,439,D,likely_benign,0.0776,VUS (high),shroom3_rock2
+rock2,D,601,V,likely_benign,0.2558,likely benign,shroom3_rock2
+rock2,A,663,T,likely_benign,0.0753,VUS (high),shroom3_rock2
+rock2,R,1044,Q,likely_benign,0.2802,VUS (mid),shroom3_rock2
+cdh2,A,21,T,likely_benign,0.107,benign ,shroom3_cdh2_cyto
+cdh2,E,24,Q,likely_benign,0.079,likely benign,shroom3_cdh2_cyto
+cdh2,N,64,H,likely_benign,0.0715,VUS (mid),shroom3_cdh2_cyto
+cdh2,Q,107,E,likely_benign,0.0827,VUS (mid),shroom3_cdh2_cyto
+cdh2,A,118,T,likely_benign,0.0764,benign,shroom3_cdh2_cyto
+cdh2,V,289,I,likely_benign,0.1354,VUS (low),shroom3_cdh2_cyto
+cdh2,V,309,M,likely_benign,0.1169,likely benign,shroom3_cdh2_cyto
+cdh2,P,449,T,likely_benign,0.25,VUS (mid),shroom3_cdh2_cyto
+cdh2,N,500,S,likely_benign,0.0853,likely benign,shroom3_cdh2_cyto
+cdh2,G,717,A,likely_benign,0.1188,VUS (low),shroom3_cdh2_cyto
+cdh2,R,823,Q,likely_pathogenic,0.7992,VUS (mid),shroom3_cdh2_cyto
+cdh2,N,845,S,likely_benign,0.0807,benign,shroom3_cdh2_cyto
+dvl2,E,13,K,likely_pathogenic,0.9346,VUS (mid),shroom3_dvl2
+dvl2,H,177,R,likely_benign,0.1389,VUS (mid),shroom3_dvl2
+dvl2,M,261,V,ambiguous,0.365,VUS (mid),shroom3_dvl2
+dvl2,R,367,G,ambiguous,0.4781,VUS (mid),shroom3_dvl2
+dvl2,R,367,Q,likely_benign,0.1911,VUS (high),shroom3_dvl2
+dvl2,M,399,V,likely_benign,0.0675,benign,shroom3_dvl2
+dvl2,R,415,Q,likely_benign,0.0631,benign,shroom3_dvl2
+dvl2,D,441,Y,likely_pathogenic,0.99,VUS (mid),shroom3_dvl2
+dvl2,T,535,I,likely_pathogenic,0.8046,benign,shroom3_dvl2
+dvl2,R,590,Q,likely_benign,0.1111,VUS (mid),shroom3_dvl2
+dvl2,P,670,H,likely_benign,0.1088,VUS (mid),shroom3_dvl2
+dvl2,P,679,S,likely_benign,0.1974,VUS (mid),shroom3_dvl2
+dvl2,P,688,L,likely_benign,0.0847,benign,shroom3_dvl2
+dvl2,D,706,E,likely_benign,0.3193,VUS (mid),shroom3_dvl2
+dvl2,R,718,H,likely_pathogenic,0.9744,VUS (low),shroom3_dvl2
+ctnnb1,R,151,C,likely_pathogenic,0.9399,VUS (high),shroom3_ctnnb1
+ctnnb1,N,287,S,likely_benign,0.0536,VUS (mid),shroom3_ctnnb1
+ctnnb1,T,297,M,likely_pathogenic,0.8223,VUS (high),shroom3_ctnnb1
+zic3,G,7,R,likely_pathogenic,0.6767,VUS (mid),zic3_gli3
+zic3,G,7,R,likely_pathogenic,0.6767,VUS (mid),zic3_kpna1
+zic3,G,7,R,likely_pathogenic,0.6767,VUS (mid),zic3_kpna6
+zic3,G,7,R,likely_pathogenic,0.6767,VUS (mid),zic3_mdfi
+zic3,G,7,R,likely_pathogenic,0.6767,VUS (mid),zic3_tcf7l1
+zic3,G,17,C,ambiguous,0.4062,benign,zic3_gli3
+zic3,G,17,C,ambiguous,0.4062,benign,zic3_kpna1
+zic3,G,17,C,ambiguous,0.4062,benign,zic3_kpna6
+zic3,G,17,C,ambiguous,0.4062,benign,zic3_mdfi
+zic3,G,17,C,ambiguous,0.4062,benign,zic3_tcf7l1
+zic3,A,21,G,likely_benign,0.1043,VUS (mid),zic3_gli3
+zic3,A,21,G,likely_benign,0.1043,VUS (mid),zic3_kpna1
+zic3,A,21,G,likely_benign,0.1043,VUS (mid),zic3_kpna6
+zic3,A,21,G,likely_benign,0.1043,VUS (mid),zic3_mdfi
+zic3,A,21,G,likely_benign,0.1043,VUS (mid),zic3_tcf7l1
+zic3,A,62,T,likely_benign,0.1339,VUS (mid),zic3_gli3
+zic3,A,62,T,likely_benign,0.1339,VUS (mid),zic3_kpna1
+zic3,A,62,T,likely_benign,0.1339,VUS (mid),zic3_kpna6
+zic3,A,62,T,likely_benign,0.1339,VUS (mid),zic3_mdfi
+zic3,A,62,T,likely_benign,0.1339,VUS (mid),zic3_tcf7l1
+zic3,T,98,A,likely_benign,0.1084,VUS (mid),zic3_gli3
+zic3,T,98,A,likely_benign,0.1084,VUS (mid),zic3_kpna1
+zic3,T,98,A,likely_benign,0.1084,VUS (mid),zic3_kpna6
+zic3,T,98,A,likely_benign,0.1084,VUS (mid),zic3_mdfi
+zic3,T,98,A,likely_benign,0.1084,VUS (mid),zic3_tcf7l1
+zic3,P,102,L,ambiguous,0.4415,VUS (low),zic3_gli3
+zic3,P,102,L,ambiguous,0.4415,VUS (low),zic3_kpna1
+zic3,P,102,L,ambiguous,0.4415,VUS (low),zic3_kpna6
+zic3,P,102,L,ambiguous,0.4415,VUS (low),zic3_mdfi
+zic3,P,102,L,ambiguous,0.4415,VUS (low),zic3_tcf7l1
+zic3,S,109,C,likely_benign,0.277,likely benign,zic3_gli3
+zic3,S,109,C,likely_benign,0.277,likely benign,zic3_kpna1
+zic3,S,109,C,likely_benign,0.277,likely benign,zic3_kpna6
+zic3,S,109,C,likely_benign,0.277,likely benign,zic3_mdfi
+zic3,S,109,C,likely_benign,0.277,likely benign,zic3_tcf7l1
+zic3,S,103,T,likely_benign,0.1381,VUS (mid),zic3_gli3
+zic3,S,103,T,likely_benign,0.1381,VUS (mid),zic3_kpna1
+zic3,S,103,T,likely_benign,0.1381,VUS (mid),zic3_kpna6
+zic3,S,103,T,likely_benign,0.1381,VUS (mid),zic3_mdfi
+zic3,S,103,T,likely_benign,0.1381,VUS (mid),zic3_tcf7l1
+zic3,S,124,G,likely_benign,0.0826,VUS (mid),zic3_gli3
+zic3,S,124,G,likely_benign,0.0826,VUS (mid),zic3_kpna1
+zic3,S,124,G,likely_benign,0.0826,VUS (mid),zic3_kpna6
+zic3,S,124,G,likely_benign,0.0826,VUS (mid),zic3_mdfi
+zic3,S,124,G,likely_benign,0.0826,VUS (mid),zic3_tcf7l1
+zic3,G,213,S,likely_benign,0.1238,VUS (mid),zic3_gli3
+zic3,G,213,S,likely_benign,0.1238,VUS (mid),zic3_kpna1
+zic3,G,213,S,likely_benign,0.1238,VUS (mid),zic3_kpna6
+zic3,G,213,S,likely_benign,0.1238,VUS (mid),zic3_mdfi
+zic3,G,213,S,likely_benign,0.1238,VUS (mid),zic3_tcf7l1
+zic3,P,217,A,likely_benign,0.1636,benign,zic3_gli3
+zic3,P,217,A,likely_benign,0.1636,benign,zic3_kpna1
+zic3,P,217,A,likely_benign,0.1636,benign,zic3_kpna6
+zic3,P,217,A,likely_benign,0.1636,benign,zic3_mdfi
+zic3,P,217,A,likely_benign,0.1636,benign,zic3_tcf7l1
+zic3,C,253,S,likely_pathogenic,0.999,VUS (high),zic3_gli3
+zic3,C,253,S,likely_pathogenic,0.999,VUS (high),zic3_kpna1
+zic3,C,253,S,likely_pathogenic,0.999,VUS (high),zic3_kpna6
+zic3,C,253,S,likely_pathogenic,0.999,VUS (high),zic3_mdfi
+zic3,C,253,S,likely_pathogenic,0.999,VUS (high),zic3_tcf7l1
+zic3,H,281,Y,likely_pathogenic,0.991,VUS (high),zic3_gli3
+zic3,H,281,Y,likely_pathogenic,0.991,VUS (high),zic3_kpna1
+zic3,H,281,Y,likely_pathogenic,0.991,VUS (high),zic3_kpna6
+zic3,H,281,Y,likely_pathogenic,0.991,VUS (high),zic3_mdfi
+zic3,H,281,Y,likely_pathogenic,0.991,VUS (high),zic3_tcf7l1
+zic3,H,286,R,likely_pathogenic,0.997,VUS (high),zic3_gli3
+zic3,H,286,R,likely_pathogenic,0.997,VUS (high),zic3_kpna1
+zic3,H,286,R,likely_pathogenic,0.997,VUS (high),zic3_kpna6
+zic3,H,286,R,likely_pathogenic,0.997,VUS (high),zic3_mdfi
+zic3,H,286,R,likely_pathogenic,0.997,VUS (high),zic3_tcf7l1
+zic3,C,297,F,likely_pathogenic,0.99,VUS (high),zic3_gli3
+zic3,C,297,F,likely_pathogenic,0.99,VUS (high),zic3_kpna1
+zic3,C,297,F,likely_pathogenic,0.99,VUS (high),zic3_kpna6
+zic3,C,297,F,likely_pathogenic,0.99,VUS (high),zic3_mdfi
+zic3,C,297,F,likely_pathogenic,0.99,VUS (high),zic3_tcf7l1
+zic3,H,318,N,likely_pathogenic,1,VUS (high),zic3_gli3
+zic3,H,318,N,likely_pathogenic,1,VUS (high),zic3_kpna1
+zic3,H,318,N,likely_pathogenic,1,VUS (high),zic3_kpna6
+zic3,H,318,N,likely_pathogenic,1,VUS (high),zic3_mdfi
+zic3,H,318,N,likely_pathogenic,1,VUS (high),zic3_tcf7l1
+zic3,T,323,M,likely_pathogenic,0.987,pathogenic,zic3_gli3
+zic3,T,323,M,likely_pathogenic,0.987,pathogenic,zic3_kpna1
+zic3,T,323,M,likely_pathogenic,0.987,pathogenic,zic3_kpna6
+zic3,T,323,M,likely_pathogenic,0.987,pathogenic,zic3_mdfi
+zic3,T,323,M,likely_pathogenic,0.987,pathogenic,zic3_tcf7l1
+zic3,R,350,G,likely_pathogenic,0.998,VUS (mid),zic3_gli3
+zic3,R,350,G,likely_pathogenic,0.998,VUS (mid),zic3_kpna1
+zic3,R,350,G,likely_pathogenic,0.998,VUS (mid),zic3_kpna6
+zic3,R,350,G,likely_pathogenic,0.998,VUS (mid),zic3_mdfi
+zic3,R,350,G,likely_pathogenic,0.998,VUS (mid),zic3_tcf7l1
+zic3,S,402,P,likely_pathogenic,0.998,VUS (mid),zic3_gli3
+zic3,S,402,P,likely_pathogenic,0.998,VUS (mid),zic3_kpna1
+zic3,S,402,P,likely_pathogenic,0.998,VUS (mid),zic3_kpna6
+zic3,S,402,P,likely_pathogenic,0.998,VUS (mid),zic3_mdfi
+zic3,S,402,P,likely_pathogenic,0.998,VUS (mid),zic3_tcf7l1
+zic3,K,405,E,likely_pathogenic,0.997,VUS (high),zic3_gli3
+zic3,K,405,E,likely_pathogenic,0.997,VUS (high),zic3_kpna1
+zic3,K,405,E,likely_pathogenic,0.997,VUS (high),zic3_kpna6
+zic3,K,405,E,likely_pathogenic,0.997,VUS (high),zic3_mdfi
+zic3,K,405,E,likely_pathogenic,0.997,VUS (high),zic3_tcf7l1
+zic3,P,442,H,likely_benign,0.1048,benign,zic3_gli3
+zic3,P,442,H,likely_benign,0.1048,benign,zic3_kpna1
+zic3,P,442,H,likely_benign,0.1048,benign,zic3_kpna6
+zic3,P,442,H,likely_benign,0.1048,benign,zic3_mdfi
+zic3,P,442,H,likely_benign,0.1048,benign,zic3_tcf7l1
+zic3,A,447,G,likely_benign,0.132,VUS (high),zic3_gli3
+zic3,A,447,G,likely_benign,0.132,VUS (high),zic3_kpna1
+zic3,A,447,G,likely_benign,0.132,VUS (high),zic3_kpna6
+zic3,A,447,G,likely_benign,0.132,VUS (high),zic3_mdfi
+zic3,A,447,G,likely_benign,0.132,VUS (high),zic3_tcf7l1
+gli3,T,9,M,likely_benign,0.0835,likely benign,zic3_gli3
+gli3,V,71,I,likely_benign,0.0578,benign,zic3_gli3
+gli3,P,103,S,likely_benign,0.1614,VUS (mid),zic3_gli3
+gli3,R,114,K,ambiguous,0.3482,benign,zic3_gli3
+gli3,R,180,Q,likely_benign,0.2376,VUS (low),zic3_gli3
+gli3,T,183,A,likely_benign,0.0495,benign,zic3_gli3
+gli3,P,189,S,likely_benign,0.165,VUS (low),zic3_gli3
+gli3,T,263,K,likely_benign,0.2533,VUS (mid),zic3_gli3
+gli3,I,342,V,likely_benign,0.13,VUS (mid),zic3_gli3
+gli3,G,465,R,likely_pathogenic,0.8158,benign,zic3_gli3
+gli3,G,657,S,likely_benign,0.0715,likely benign,zic3_gli3
+gli3,P,707,S,likely_benign,0.2002,VUS (mid),zic3_gli3
+gli3,N,722,S,likely_benign,0.0681,benign,zic3_gli3
+gli3,G,727,R,likely_benign,0.2439,benign,zic3_gli3
+gli3,D,734,N,likely_benign,0.0743,likely benign,zic3_gli3
+gli3,A,770,V,likely_benign,0.0817,VUS (mid),zic3_gli3
+gli3,I,808,M,likely_benign,0.0751,benign,zic3_gli3
+gli3,A,879,T,likely_benign,0.1172,benign,zic3_gli3
+gli3,P,998,L,likely_benign,0.0569,benign,zic3_gli3
+gli3,G,1001,S,likely_benign,0.0736,benign,zic3_gli3
+gli3,S,1028,I,likely_benign,0.1554,benign,zic3_gli3
+gli3,T,1070,S,likely_benign,0.0739,benign,zic3_gli3
+gli3,T,1074,N,likely_benign,0.1232,VUS (mid),zic3_gli3
+gli3,G,1125,R,likely_benign,0.1207,VUS (mid),zic3_gli3
+gli3,P,1222,S,likely_benign,0.0562,benign,zic3_gli3
+gli3,G,1336,E,likely_benign,0.0851,benign,zic3_gli3
+gli3,R,1537,C,likely_benign,0.2216,benign,zic3_gli3
+mdfi,R,128,Q,likely_benign,0.0977,benign,zic3_mdfi
+mdfi,T,178,K,likely_pathogenic,0.5655,VUS (high),zic3_mdfi
+mdfi,A,187,T,likely_benign,0.1203,likely benign,zic3_mdfi
+kpna1,I,381,L,0.4622,ambiguous,VUS (high),zic3_kpna1
+kpna1,S,73,N,0.0728,likely_benign,benign,zic3_kpna1
+kpna6,R,128,Q,0.3399,likely_benign,VUS (mid),zic3_kpna6
+kpna6,K,424,N,0.6877,likely_pathogenic,VUS (high),zic3_kpna6
+kpna6,I,498,T,0.8778,likely_pathogenic,VUS (high),zic3_kpna6
+kpna6,D,507,N,0.1991,likely_benign,VUS (mid),zic3_kpna6
+tcf7l1,G,12,S,0.1203,likely_benign,benign,zic3_tcf7l1
+tcf7l1,G,14,S,0.0974,likely_benign,VUS(mid),zic3_tcf7l1
+tcf7l1,Q,89,H,0.1525,likely_benign,VUS (mid),zic3_tcf7l1
+tcf7l1,S,141,P,0.1508,likely_benign,VUS mid),zic3_tcf7l1
+tcf7l1,S,160,T,0.0679,likely_benign,benign,zic3_tcf7l1
+tcf7l1,L,248,I,0.2646,likely_benign,VUS (mid),zic3_tcf7l1
+tcf7l1,P,253,S,0.1489,likely_benign,benign,zic3_tcf7l1
+tcf7l1,G,533,R,0.2344,likely_benign,benign,zic3_tcf7l1
+tcf7l1,Q,538,H,0.0949,likely_benign,VUS (mid),zic3_tcf7l1

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+
+# FoldX — proprietary; users supply their own binary (see README). Never commit.
+foldx
+foldx5*
+foldx_*
+rotabase.txt
+*.fxout
+
+# AlphaFold structures — large; obtain from AlphaFold DB / Server (see docs/input_formats.md)
+structures/
+**/structures/
+
+# Large, regenerable pipeline outputs (recreated by running the pipeline)
+**/foldx_runs/
+processed/
+results/chd_rerun/
+results/foldx_runs/
+results/aug4/
+verification_run/
+_work/
+
+# Logs and archives
+*.log
+*.tar.gz

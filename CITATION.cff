@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use MAVIS, please cite it as below."
+title: "MAVIS: Multimer-Aware Variant Impact Scoring"
+abstract: >-
+  A FoldX-based structural variant-interpretation pipeline that reports
+  mechanism and structural-evidence strength separately from phenotype, using a
+  three-axis delta-delta-G framework (monomer / complex-fold / binding) with
+  pLDDT gating and a four-way concordance framework.
+authors:
+  - family-names: Arnce
+    given-names: Luke
+    # affiliation: "Ware Lab, Indiana University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  # - TODO: add co-authors (e.g., Stephanie M. Ware)
+license: MIT
+repository-code: "https://github.com/TODO-your-username/mavis"
+version: "0.1.0"
+date-released: "2026-06-22"
+keywords:
+  - variant interpretation
+  - FoldX
+  - AlphaFold
+  - protein-protein interaction
+  - congenital heart disease

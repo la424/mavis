@@ -1,0 +1,6 @@
+# MAVIS Python dependencies (Python 3.9+; developed on 3.14)
+# Pin exact versions for a frozen environment with: pip freeze > requirements.lock
+pandas
+numpy
+biopython
+openpyxl

@@ -1,0 +1,167 @@
+# MAVIS — Multimer-Aware Variant Impact Scoring
+
+MAVIS is a FoldX-based structural variant-interpretation pipeline. Its central
+premise is that **structural disruption is not the same as pathogenicity**: MAVIS
+reports the *mechanism* of a variant's structural effect and the *strength* of the
+structural evidence **separately** from phenotype, so that "no structural effect
+detected" is never silently read as "benign."
+
+## What it does
+
+For each missense variant, MAVIS computes a **three-axis ΔΔG** profile against
+AlphaFold structures using FoldX:
+
+- `ddg_monomer` — effect on the isolated subunit's fold
+- `ddg_fold_{partner}` — effect on the fold within the complex
+- `ddg_binding_{partner}` — effect on the protein–protein interface
+
+ΔΔG concordance is **pLDDT-gated** (≥70 strict, ≥50 relaxed) to suppress FoldX
+artifacts at low-confidence positions, and interface calls are gated by
+interface-position pLDDT rather than raw contact count. A **four-way concordance
+framework** then integrates the structural tier, FoldX ΔΔG, AlphaMissense, and
+Franklin/ClinVar annotations.
+
+The pipeline predicts **structural disruption** — not pathogenicity. The benchmark
+below measures how well its structural calls agree with literature-grounded
+structural expectations.
+
+## Repository layout
+
+```
+scripts/                 core engine + drivers
+  mavis_v7/              the MAVIS package (config, foldx_runner, mechanism,
+                          evaluation, metrics, concordance, pipeline, ...)
+  run_live.py            benchmark driver (live FoldX run)
+  apply_concordance_v5.py   four-way concordance (external tools)
+  build_report.py        spreadsheet report
+  mavis_v7_baseline_correct.py, *_patch.py, relaxed_regrounding_walk.py
+                          post-processing / grading steps (see docs/)
+run_chd.py               CHD pipeline driver
+prepare_chd_input.py     builds CHD variant input
+benchmark_variants_v5.csv, chd_input_final.csv   variant inputs
+inputs/                  cached intermediates for the no-FoldX self-test + AM table
+reference_outputs/       canonical result files (this study's outputs)
+data/                    reference inputs (UniProt domain ranges, variant–domain map)
+docs/                    canonical benchmark ledger, results synthesis, methods, design notes
+verification/            self-test that reproduces the headline metrics
+examples/                getting started
+```
+
+## Installation
+
+```bash
+pip install -r requirements.txt        # pandas, numpy, biopython, openpyxl
+```
+
+Two external dependencies are **not** bundled (see "Inputs"):
+
+1. **FoldX 5.x** — proprietary, free for academics from https://foldxsuite.crg.eu/.
+   Download your own copy and point MAVIS at it:
+   ```bash
+   export FOLDX_BINARY=/path/to/foldx
+   ```
+2. **AlphaFold structures** — you supply monomer + multimer predictions for your
+   proteins (the pipeline consumes structures; it does not predict them).
+
+## The three pipelines
+
+All three share one engine; they differ only in input and in whether external
+tools are layered on.
+
+**1. Benchmark** (44 variants / 11 PPI systems)
+```bash
+export FOLDX_BINARY=/path/to/foldx
+python scripts/run_live.py          # -> results/mavis_v7_results.csv
+# then concordance + evaluation (see scripts/apply_concordance_v5.py --help and docs/)
+```
+
+**2. CHD — full (with external concordance)**
+```bash
+export FOLDX_BINARY=/path/to/foldx
+python run_chd.py                                   # structural results
+python scripts/apply_concordance_v5.py --help       # then fold in AlphaMissense + Franklin
+```
+
+**3. CHD — structural only (multimer structural results, no external tools)**
+
+This is simply the structural stage on its own — run `run_chd.py` and stop. The
+output `results/chd_rerun/chd_structural_results.csv` contains the three ΔΔG axes,
+the structural tier, and pLDDT gating, with **no** AlphaMissense / Franklin / ClinVar
+columns. Do not run `apply_concordance_v5.py`.
+```bash
+export FOLDX_BINARY=/path/to/foldx
+python run_chd.py
+```
+
+## Quick self-test (no FoldX required)
+
+The framework's headline metrics can be reproduced from cached intermediates
+without running FoldX. See **`verification/README.md`** for the exact command; it
+runs `verification/verify_stage6.py` against `inputs/intermediate/`.
+
+## Benchmark results
+
+On the 44-variant / 11-PPI-system benchmark (Pipeline 1, t = 2.5, pLDDT-reconciled):
+
+| Metric | Value |
+|---|---|
+| structural_agreement | **0.77** (threshold sweep 0.76–0.80) |
+| mech_consistency | **0.73** (pLDDT-reconciled; 0.70 raw) |
+| directional agreement (strict / relaxed) | 0.773 / 0.757 |
+
+Pipeline 1 (Grantham severity × contact count, **no ΔΔG term**) is a calibrated
+structural-evidence-**strength** gradient that complements — rather than competes
+with — the ΔΔG mechanism call. The neighborhood/Pipeline-2 variant was tested and
+**rejected** (it degraded the gradient); it is retained only as a tested
+alternative. The canonical derivation lives in `docs/MAVIS_v7_canonical_benchmark_ledger.md`.
+
+## Inputs
+
+**Variant CSV** (one row per variant). Minimal columns for structural scoring:
+
+| column | meaning |
+|---|---|
+| `gene` | gene symbol (matches the system config) |
+| `ref_aa`, `position`, `alt_aa` | reference AA, 1-based residue, alternate AA |
+| `system` | which PPI system / partner set (defined in the config) |
+
+The full concordance step additionally uses `AlphaMissense`, `AlphaMissense_pathogenicity`,
+and `franklin` columns. System → partner/structure mappings are defined in
+`scripts/mavis_v7/build_chd_config.py` (CHD) and `mavis_v7/config.py` (benchmark);
+adapt these for your own proteins.
+
+**Structures.** Place AlphaFold monomer + multimer PDBs under `./structures`,
+named per the system config. Monomers are downloadable from the AlphaFold DB by
+UniProt ID; multimers must be predicted (AlphaFold Server / ColabFold / AlphaFold-Multimer).
+
+## CHD data provenance & required acknowledgment
+
+The CHD variants derive from the **Gabriella Miller Kids First Pediatric Research
+Program**. They are distinct-variant-level and de-identified (no per-individual
+genotypes, allele counts, or sample identifiers). Use is governed by the Kids
+First / dbGaP Data Use Certification.
+
+> **TODO before public release:** add the dbGaP study accession and paste the
+> current required Kids First acknowledgment text here.
+
+## Reproducing the full study
+
+Code, the worked example, and the result CSVs live here. The full AlphaFold
+structure set (large) is best archived separately on **Zenodo/Figshare** with a
+DOI linked from this README, which also keeps a citable record of the exact inputs.
+(GitHub's Zenodo integration can additionally mint a DOI for this code on release.)
+
+## Caveats
+
+- "Bring your own structures + FoldX": MAVIS consumes AlphaFold structures and a
+  user-supplied FoldX binary; it does not generate structures.
+- Variants in disordered / low-pLDDT regions are structurally **unevaluable**
+  regardless of substitution severity — this is reported, not silently dropped.
+
+## Citation
+
+See `CITATION.cff`.
+
+## License
+
+MIT — see `LICENSE`.
