@@ -9,11 +9,13 @@ abstract: >-
 authors:
   - family-names: Arnce
     given-names: Luke
-    # affiliation: "Ware Lab, Indiana University"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
-  # - TODO: add co-authors (e.g., Stephanie M. Ware)
+    affiliation: "Indiana University School of Medicine"
+    orcid: "https://orcid.org/0000-0002-1259-6468"
+  - family-names: Ware
+    given-names: Stephanie M.
+    affiliation: "Indiana University School of Medicine"
 license: MIT
-repository-code: "https://github.com/TODO-your-username/mavis"
+repository-code: "https://github.com/la424/mavis"
 version: "0.1.0"
 date-released: "2026-06-22"
 keywords:

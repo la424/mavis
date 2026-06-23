@@ -159,13 +159,17 @@ UniProt ID; multimers must be predicted (AlphaFold Server / ColabFold / AlphaFol
 
 ## CHD data provenance & required acknowledgment
 
-The CHD variants derive from the **Gabriella Miller Kids First Pediatric Research
-Program**. They are distinct-variant-level and de-identified (no per-individual
-genotypes, allele counts, or sample identifiers). Use is governed by the Kids
-First / dbGaP Data Use Certification.
+The CHD variants analyzed here derive from the **Gabriella Miller Kids First
+Pediatric Research Program (Kids First)**, supported by the Common Fund of the
+Office of the Director, National Institutes of Health. The data were obtained
+through the Kids First Data Resource Center and dbGaP, and their use is governed
+by a Kids First / dbGaP Data Use Certification. Only distinct-variant-level,
+de-identified data are included in this repository - no per-individual genotypes,
+allele counts, or sample identifiers.
 
-> **TODO before public release:** add the dbGaP study accession and paste the
-> current required Kids First acknowledgment text here.
+> dbGaP study accession: _to be added_ - insert the phs###### for the specific
+> Kids First CHD dataset, and verify the exact acknowledgment wording your Data
+> Use Certification requires.
 
 ## Reproducing the full study
 
