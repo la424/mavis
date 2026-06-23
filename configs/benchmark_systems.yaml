@@ -1,0 +1,171 @@
+systems:
+  brca1_bard1:
+    structure_type: nmr
+    pdb_file: 1JM7_processed.pdb
+    source_file: 1JM7.pdb
+    nmr_model: 1
+    hetatm_keep_all:
+    - ZN
+    hetatm_strip_all:
+    - HOH
+    preprocessing_notes: NMR MODEL 1 extracted. ZN retained (RING domain C3HC4).
+    notes: RING domain zinc coordination; NMR geometry may increase FoldX SD.
+    genes:
+      brca1:
+        chain: A
+        monomer_pdb: fold_brca1_model_0.pdb
+      bard1:
+        chain: B
+        monomer_pdb: fold_bard1_model_0.pdb
+  pi3k:
+    structure_type: AF
+    pdb_file: fold_pik3ca_pik3r1_model_0.pdb
+    genes:
+      pik3ca:
+        chain: A
+        monomer_pdb: fold_pik3ca_model_0.pdb
+      pik3r1:
+        chain: B
+        monomer_pdb: fold_pik3r1_model_0.pdb
+  mlh1_pms2:
+    structure_type: AF
+    pdb_file: fold_mlh1_pms2_model_0.pdb
+    genes:
+      mlh1:
+        chain: A
+        monomer_pdb: fold_mlh1_model_0.pdb
+      pms2:
+        chain: B
+        monomer_pdb: fold_pms2_model_0.pdb
+  msh2_msh6:
+    structure_type: AF
+    pdb_file: fold_msh2_msh6_model_0.pdb
+    genes:
+      msh2:
+        chain: A
+        monomer_pdb: fold_msh2_model_0.pdb
+      msh6:
+        chain: B
+        monomer_pdb: fold_msh6_model_0.pdb
+  vhl_elonginc:
+    structure_type: AF
+    pdb_file: fold_vhl_tceb1_model_0.pdb
+    notes: 'Non-standard chain order: VHL=B, ElonginC=A.'
+    genes:
+      vhl:
+        chain: B
+        monomer_pdb: fold_vhl_model_0.pdb
+      tceb1:
+        chain: A
+        monomer_pdb: fold_tceb1_model_0.pdb
+  kras_craf:
+    structure_type: xray
+    pdb_file: 6XI7_processed.pdb
+    source_file: 6XI7.pdb
+    hetatm_keep_per_chain:
+      B:
+      - ZN
+    hetatm_strip_all:
+    - GNP
+    - MG
+    - SO4
+    - CL
+    - HOH
+    preprocessing_notes: GNP removed (FoldX cannot handle). KRAS G12 monomer DDG low-reliability.
+    genes:
+      kras:
+        chain: A
+        monomer_pdb: fold_kras_model_0.pdb
+      raf1:
+        chain: B
+        monomer_pdb: fold_raf1_model_0.pdb
+  hemoglobin_dimer:
+    structure_type: xray
+    pdb_file: 2HHB_dimer_AB_processed.pdb
+    source_file: 2HHB_dimer_AB.pdb
+    hetatm_strip_all:
+    - HEM
+    - HOH
+    - PO4
+    preprocessing_notes: "HEM removed. E6V >8A from HEM \u2014 geometry unaffected."
+    genes:
+      hbb:
+        chain: B
+        monomer_pdb: fold_hbb_model_0.pdb
+        monomer_offset: -1
+      hba1:
+        chain: A
+        monomer_pdb: fold_hba1_model_0.pdb
+        monomer_offset: -1
+  hemoglobin_tetramer:
+    structure_type: xray
+    pdb_file: 2HHB_processed.pdb
+    source_file: 2HHB.pdb
+    hetatm_strip_all:
+    - HEM
+    - HOH
+    - PO4
+    preprocessing_notes: HEM removed. N102T excluded from Level 3 correlation (4.4A
+      from HEM).
+    notes: 4-chain tetramer. Pairwise AnalyseComplex per partner chain.
+    genes:
+      hbb:
+        chain: B
+        monomer_pdb: fold_hbb_model_0.pdb
+        monomer_offset: -1
+      hba1:
+        chain: A
+        monomer_pdb: fold_hba1_model_0.pdb
+        monomer_offset: -1
+    chain_map:
+      hba1_1: A
+      hbb: B
+      hba1_2: C
+      hbb_2: D
+    pairwise_partners:
+      hbb:
+      - A
+      - C
+      - D
+      hba1_1:
+      - B
+      - D
+      hba1_2:
+      - B
+      - D
+      hbb_2:
+      - A
+      - B
+      - C
+  troponin_ic:
+    structure_type: AF
+    pdb_file: fold_tnni3_tnnc1_model_0.pdb
+    genes:
+      tnni3:
+        chain: A
+        monomer_pdb: fold_tnni3_model_0.pdb
+      tnnc1:
+        chain: B
+        monomer_pdb: fold_tnnc1_model_0.pdb
+  cam_cav12:
+    structure_type: AF
+    pdb_file: fold_calm1_cacna1c_model_0.pdb
+    notes: CACNA1C IQ motif region; partial pLDDT (~77 mean in region).
+    genes:
+      calm1:
+        chain: A
+        monomer_pdb: fold_calm1_model_0.pdb
+      cacna1c:
+        chain: B
+        monomer_pdb: fold_cacna1c_model_0.pdb
+  smad4_smad3:
+    structure_type: AF
+    pdb_file: fold_smad4_smad3_model_0.pdb
+    notes: 'Non-standard chain order: SMAD4=B, SMAD3=A.'
+    genes:
+      smad4:
+        chain: B
+        monomer_pdb: fold_smad4_model_0.pdb
+      smad3:
+        chain: A
+        monomer_pdb: fold_smad3_model_0.pdb

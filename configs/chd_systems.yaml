@@ -1,0 +1,134 @@
+systems:
+  shroom3_actin:
+    structure_type: AF
+    pdb_file: fold_shroom3_actin_chain_model_0.pdb
+    cif_file: fold_shroom3_actin_chain_model_0.cif
+    notes: 'CHD per-pairing system: shroom3 vs actin. Variants in shroom3.'
+    genes:
+      shroom3:
+        chain: A
+        monomer_pdb: fold_shroom3_model_0.pdb
+        monomer_cif: fold_shroom3_model_0.cif
+      actin:
+        chain: B
+        monomer_pdb: fold_shroom3_actin_chain_model_0.pdb
+  shroom3_dvl2:
+    structure_type: AF
+    pdb_file: fold_shroom3_dvl2_model_0.pdb
+    cif_file: fold_shroom3_dvl2_model_0.cif
+    notes: 'CHD per-pairing system: shroom3 vs dvl2. Variants in shroom3.'
+    genes:
+      shroom3:
+        chain: A
+        monomer_pdb: fold_shroom3_model_0.pdb
+        monomer_cif: fold_shroom3_model_0.cif
+      dvl2:
+        chain: B
+        monomer_pdb: fold_dvl2_model_0.pdb
+        monomer_cif: fold_dvl2_model_0.cif
+  shroom3_ctnnb1:
+    structure_type: AF
+    pdb_file: fold_shroom3_ctnnb1_model_0.pdb
+    cif_file: fold_shroom3_ctnnb1_model_0.cif
+    notes: 'CHD per-pairing system: shroom3 vs ctnnb1. Variants in shroom3.'
+    genes:
+      shroom3:
+        chain: A
+        monomer_pdb: fold_shroom3_model_0.pdb
+        monomer_cif: fold_shroom3_model_0.cif
+      ctnnb1:
+        chain: B
+        monomer_pdb: fold_ctnnb1_model_0.pdb
+        monomer_cif: fold_ctnnb1_model_0.cif
+  shroom3_rock2:
+    structure_type: AF
+    pdb_file: fold_shroom3_rock2_model_0.pdb
+    notes: 'CHD per-pairing system: shroom3 vs rock2. Variants in shroom3.'
+    genes:
+      shroom3:
+        chain: A
+        monomer_pdb: fold_shroom3_model_0.pdb
+        monomer_cif: fold_shroom3_model_0.cif
+      rock2:
+        chain: B
+        monomer_pdb: rock2.pdb
+  shroom3_cdh2_cyto:
+    structure_type: AF
+    pdb_file: fold_shroom3_cdh2_cytoplasmic_domain.pdb
+    notes: CDH2 cytoplasmic-domain construct (full-length res 746-906). CDH2 partner
+      positions offset -745. SHROOM3 variants (hub) unaffected.
+    genes:
+      shroom3:
+        chain: A
+        monomer_pdb: fold_shroom3_model_0.pdb
+        monomer_cif: fold_shroom3_model_0.cif
+      cdh2:
+        chain: B
+        monomer_pdb: fold_cdh2_model_0.pdb
+        monomer_cif: fold_cdh2_model_0.cif
+        multimer_offset: 745
+  zic3_gli3:
+    structure_type: AF
+    pdb_file: fold_zic3_gli3_model_0.pdb
+    cif_file: fold_zic3_gli3_model_0.cif
+    notes: 'CHD per-pairing system: zic3 vs gli3. Variants in zic3.'
+    genes:
+      zic3:
+        chain: A
+        monomer_pdb: fold_zic3_model_0.pdb
+        monomer_cif: fold_zic3_model_0.cif
+      gli3:
+        chain: B
+        monomer_pdb: gli3.pdb
+  zic3_kpna1:
+    structure_type: AF
+    pdb_file: fold_zic3_kpna1_model_0.pdb
+    cif_file: fold_zic3_kpna1_model_0.cif
+    notes: 'CHD per-pairing system: zic3 vs kpna1. Variants in zic3.'
+    genes:
+      zic3:
+        chain: A
+        monomer_pdb: fold_zic3_model_0.pdb
+        monomer_cif: fold_zic3_model_0.cif
+      kpna1:
+        chain: B
+        monomer_pdb: kpna1.pdb
+  zic3_kpna6:
+    structure_type: AF
+    pdb_file: fold_zic3_kpna6_model_0.pdb
+    cif_file: fold_zic3_kpna6_model_0.cif
+    notes: 'CHD per-pairing system: zic3 vs kpna6. Variants in zic3.'
+    genes:
+      zic3:
+        chain: A
+        monomer_pdb: fold_zic3_model_0.pdb
+        monomer_cif: fold_zic3_model_0.cif
+      kpna6:
+        chain: B
+        monomer_pdb: kpna6.pdb
+  zic3_mdfi:
+    structure_type: AF
+    pdb_file: fold_zic3_mdfi_model_0.pdb
+    cif_file: fold_zic3_mdfi_model_0.cif
+    notes: 'CHD per-pairing system: zic3 vs mdfi. Variants in zic3.'
+    genes:
+      zic3:
+        chain: A
+        monomer_pdb: fold_zic3_model_0.pdb
+        monomer_cif: fold_zic3_model_0.cif
+      mdfi:
+        chain: B
+        monomer_pdb: mdfi.pdb
+  zic3_tcf7l1:
+    structure_type: AF
+    pdb_file: fold_zic3_tcf7l1_model_0.pdb
+    cif_file: fold_zic3_tcf7l1_model_0.cif
+    notes: 'CHD per-pairing system: zic3 vs tcf7l1. Variants in zic3.'
+    genes:
+      zic3:
+        chain: A
+        monomer_pdb: fold_zic3_model_0.pdb
+        monomer_cif: fold_zic3_model_0.cif
+      tcf7l1:
+        chain: B
+        monomer_pdb: tcf7l1.pdb

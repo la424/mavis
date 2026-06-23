@@ -36,8 +36,11 @@ scripts/                 core engine + drivers
   build_report.py        spreadsheet report
   mavis_v7_baseline_correct.py, *_patch.py, relaxed_regrounding_walk.py
                           post-processing / grading steps (see docs/)
+run.py                   generic runner — score ANY genes from a YAML config
+new_system.py            scaffold a YAML systems block for new genes
 run_chd.py               CHD pipeline driver
 prepare_chd_input.py     builds CHD variant input
+configs/                 YAML systems configs (chd + benchmark worked examples)
 benchmark_variants_v5.csv, chd_input_final.csv   variant inputs
 inputs/                  cached intermediates for the no-FoldX self-test + AM table
 reference_outputs/       canonical result files (this study's outputs)
@@ -50,7 +53,7 @@ examples/                getting started
 ## Installation
 
 ```bash
-pip install -r requirements.txt        # pandas, numpy, biopython, openpyxl
+pip install -r requirements.txt        # pandas, numpy, biopython, openpyxl, pyyaml
 ```
 
 Two external dependencies are **not** bundled (see "Inputs"):
@@ -92,6 +95,26 @@ columns. Do not run `apply_concordance_v5.py`.
 export FOLDX_BINARY=/path/to/foldx
 python run_chd.py
 ```
+
+## Run it on your own genes
+
+MAVIS isn't limited to the genes above — it's config-driven. To score variants in your own
+proteins, describe your complexes in a YAML file and supply AlphaFold structures; no Python
+editing required.
+
+```bash
+# scaffold a config block (prints the YAML + the structure files you need)
+python new_system.py --hub MYGENE --partner PARTNERA --partner PARTNERB
+
+# then run — auto-expands a simple gene,ref_aa,position,alt_aa CSV across systems
+export FOLDX_BINARY=/path/to/foldx
+python run.py --config my_systems.yaml --variants my_variants.csv \
+              --structures ./structures --out results/my_run --dry-run
+```
+
+`configs/chd_systems.yaml` is a worked example; `configs/benchmark_systems.yaml` covers the
+harder cases (x-ray/NMR, position offsets, non-standard chains, multi-chain complexes). Full
+walkthrough: **docs/adding_your_own_genes.md**.
 
 ## Quick self-test (no FoldX required)
 
