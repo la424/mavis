@@ -1,29 +1,37 @@
 # MAVIS — Multimer-Aware Variant Impact Scoring
 
-MAVIS is a FoldX-based structural variant-interpretation pipeline. Its central
-premise is that **structural disruption is not the same as pathogenicity**: MAVIS
-reports the *mechanism* of a variant's structural effect and the *strength* of the
-structural evidence **separately** from phenotype, so that "no structural effect
-detected" is never silently read as "benign."
+MAVIS is a FoldX-based structural variant-interpretation pipeline. Most structural
+variant-effect tools score a mutation against a single protein in isolation. But
+disease genes act in **protein complexes**, and a variant's real structural
+consequence often only appears in that multimeric context — at an interface, or in
+the fold of a subunit as it sits within its complex. MAVIS's central premise is that
+variant disruptiveness should be evaluated **in the appropriate multimer**, and that
+doing so resolves the **specific mechanism** of disruption rather than emitting a
+single undifferentiated score.
 
 ## What it does
 
 For each missense variant, MAVIS computes a **three-axis ΔΔG** profile against
-AlphaFold structures using FoldX:
+AlphaFold structures using FoldX, decomposing the structural effect by mechanism:
 
-- `ddg_monomer` — effect on the isolated subunit's fold
-- `ddg_fold_{partner}` — effect on the fold within the complex
-- `ddg_binding_{partner}` — effect on the protein–protein interface
+- `ddg_monomer` — destabilization of the isolated subunit's fold
+- `ddg_fold_{partner}` — destabilization of that subunit's fold *within the complex*
+- `ddg_binding_{partner}` — disruption of the protein–protein interface itself
 
-ΔΔG concordance is **pLDDT-gated** (≥70 strict, ≥50 relaxed) to suppress FoldX
-artifacts at low-confidence positions, and interface calls are gated by
-interface-position pLDDT rather than raw contact count. A **four-way concordance
-framework** then integrates the structural tier, FoldX ΔΔG, AlphaMissense, and
-Franklin/ClinVar annotations.
+This decomposition is what monomer-based tools miss: a variant that looks innocuous
+on the lone subunit can be a clear interface disruptor in the assembled complex, and
+MAVIS tells you which axis is hit. ΔΔG concordance is **pLDDT-gated** (≥70 strict, ≥50
+relaxed) to suppress FoldX artifacts at low-confidence positions, and interface calls
+are gated by interface-position pLDDT rather than raw contact count. A **four-way
+concordance framework** then integrates the structural tier, FoldX ΔΔG, AlphaMissense,
+and Franklin/ClinVar annotations.
 
-The pipeline predicts **structural disruption** — not pathogenicity. The benchmark
-below measures how well its structural calls agree with literature-grounded
-structural expectations.
+**Scope (important, but not the headline):** MAVIS predicts *structural disruption and
+its mechanism* — not pathogenicity. Structural disruption overlaps with, but is not
+identical to, pathogenicity, so MAVIS reports mechanism and evidence strength
+**separately** from phenotype, and "no structural effect detected" is never silently
+read as "benign." The benchmark below measures how well its structural calls agree
+with literature-grounded structural expectations.
 
 ## Repository layout
 

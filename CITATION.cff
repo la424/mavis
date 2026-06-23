@@ -2,10 +2,12 @@ cff-version: 1.2.0
 message: "If you use MAVIS, please cite it as below."
 title: "MAVIS: Multimer-Aware Variant Impact Scoring"
 abstract: >-
-  A FoldX-based structural variant-interpretation pipeline that reports
-  mechanism and structural-evidence strength separately from phenotype, using a
-  three-axis delta-delta-G framework (monomer / complex-fold / binding) with
-  pLDDT gating and a four-way concordance framework.
+  A FoldX-based pipeline for interpreting protein variants in multimeric context.
+  MAVIS evaluates variant disruptiveness in the appropriate protein complex and
+  resolves the specific mechanism of disruption via a three-axis delta-delta-G
+  framework (monomer fold / fold-in-complex / binding interface), with pLDDT
+  gating and a four-way concordance framework. It reports structural disruption
+  and its mechanism, separately from pathogenicity.
 authors:
   - family-names: Arnce
     given-names: Luke
