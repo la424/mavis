@@ -61,22 +61,34 @@ def variant_label(ref_aa, position, alt_aa):
 def resolve_uniprot(gene, organism_id=9606, reviewed=True, timeout=30):
     """Resolve a gene symbol to a UniProt accession (human reviewed by default).
 
-    Returns (accession, candidates). (None, []) if nothing matched.
+    Picks the candidate whose PRIMARY gene name actually matches `gene` -- UniProt's
+    relevance ordering is not reliable for exact gene lookups (e.g. a gene_exact:TNNC1
+    query can return TNNI3 first). Returns (accession, candidates), or (None, []).
     """
+    gene = (gene or "").strip()
+    if not gene:
+        raise ValueError("empty gene symbol")
+    if not str(organism_id).strip():
+        organism_id = 9606
     q = f"gene_exact:{gene} AND organism_id:{organism_id}"
     if reviewed:
         q += " AND reviewed:true"
     url = ("https://rest.uniprot.org/uniprotkb/search?query="
            + urllib.parse.quote(q)
            + "&fields=accession,gene_primary,protein_name,length&format=tsv&size=5")
-    with urllib.request.urlopen(url, timeout=timeout) as r:
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "MAVIS-colab/1.0 (+https://github.com/la424/mavis)"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         text = r.read().decode()
     lines = [ln for ln in text.strip().splitlines() if ln]
     if len(lines) < 2:
         return None, []
     header = lines[0].split("\t")
     cands = [dict(zip(header, ln.split("\t"))) for ln in lines[1:]]
-    acc = cands[0].get("Entry") or list(cands[0].values())[0]
+    gcol = "Gene Names (primary)"
+    exact = [c for c in cands if c.get(gcol, "").strip().lower() == gene.lower()]
+    chosen = (exact or cands)[0]
+    acc = chosen.get("Entry") or list(chosen.values())[0]
     return acc, cands
 
 def fetch_uniprot_sequence(accession, timeout=30):
