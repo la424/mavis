@@ -9,6 +9,11 @@ variant disruptiveness should be evaluated **in the appropriate multimer**, and 
 doing so resolves the **specific mechanism** of disruption rather than emitting a
 single undifferentiated score.
 
+**Try it in your browser (no install):** a guided Colab notebook fetches or predicts the
+structures, runs MAVIS, and shows per-variant mechanism cards.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/la424/mavis/blob/main/notebooks/MAVIS_colab.ipynb)
+
 ## What it does
 
 For each missense variant, MAVIS computes a **three-axis ΔΔG** profile against
