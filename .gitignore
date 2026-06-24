@@ -12,7 +12,7 @@ env/
 # FoldX — proprietary; users supply their own binary (see README). Never commit.
 foldx
 foldx5*
-foldx_*
+foldx_[0-9]*
 rotabase.txt
 *.fxout
 
