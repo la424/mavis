@@ -45,6 +45,26 @@ def prepare(in_path, out_path, configs):
     with open(in_path, encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
 
+    # Guard: AlphaMissense must be a class string and AlphaMissense_pathogenicity a float.
+    # Catches the column-transposition seen in the kpna1/kpna6/tcf7l1 annotation batch,
+    # which otherwise silently zeroes am_hit in downstream concordance.
+    def _isnum(x):
+        try:
+            float(x); return True
+        except (TypeError, ValueError):
+            return False
+    _VALID_AM = {"likely_pathogenic", "likely_benign", "ambiguous", "pathogenic", "benign"}
+    _bad = [(r.get("gene"), f"{r.get('ref_aa','')}{r.get('position','')}{r.get('alt_aa','')}",
+             r.get("AlphaMissense"), r.get("AlphaMissense_pathogenicity"))
+            for r in rows
+            if str(r.get("AlphaMissense", "")).strip().lower() not in _VALID_AM
+            or not _isnum(r.get("AlphaMissense_pathogenicity"))]
+    if _bad:
+        raise ValueError(
+            f"AlphaMissense columns look transposed/garbled in {len(_bad)} row(s) "
+            f"(want AlphaMissense=class string, AlphaMissense_pathogenicity=float). "
+            f"First few: {_bad[:5]}")
+
     g2s = gene_to_systems(configs)
 
     # Report genes in the input that map to NO kept system (will be dropped)

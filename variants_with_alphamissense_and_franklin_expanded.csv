@@ -147,18 +147,18 @@ gli3,R,1537,C,likely_benign,0.2216,benign
 mdfi,R,128,Q,likely_benign,0.0977,benign
 mdfi,T,178,K,likely_pathogenic,0.5655,VUS (high)
 mdfi,A,187,T,likely_benign,0.1203,likely benign
-kpna1,I,381,L,0.4622,ambiguous,VUS (high)
-kpna1,S,73,N,0.0728,likely_benign,benign
-kpna6,R,128,Q,0.3399,likely_benign,VUS (mid)
-kpna6,K,424,N,0.6877,likely_pathogenic,VUS (high)
-kpna6,I,498,T,0.8778,likely_pathogenic,VUS (high)
-kpna6,D,507,N,0.1991,likely_benign,VUS (mid)
-tcf7l1,G,12,S,0.1203,likely_benign,benign
-tcf7l1,G,14,S,0.0974,likely_benign,VUS(mid)
-tcf7l1,Q,89,H,0.1525,likely_benign,VUS (mid)
-tcf7l1,S,141,P,0.1508,likely_benign,VUS mid)
-tcf7l1,S,160,T,0.0679,likely_benign,benign
-tcf7l1,L,248,I,0.2646,likely_benign,VUS (mid)
-tcf7l1,P,253,S,0.1489,likely_benign,benign
-tcf7l1,G,533,R,0.2344,likely_benign,benign
-tcf7l1,Q,538,H,0.0949,likely_benign,VUS (mid)
+kpna1,I,381,L,ambiguous,0.4622,VUS (high)
+kpna1,S,73,N,likely_benign,0.0728,benign
+kpna6,R,128,Q,likely_benign,0.3399,VUS (mid)
+kpna6,K,424,N,likely_pathogenic,0.6877,VUS (high)
+kpna6,I,498,T,likely_pathogenic,0.8778,VUS (high)
+kpna6,D,507,N,likely_benign,0.1991,VUS (mid)
+tcf7l1,G,12,S,likely_benign,0.1203,benign
+tcf7l1,G,14,S,likely_benign,0.0974,VUS(mid)
+tcf7l1,Q,89,H,likely_benign,0.1525,VUS (mid)
+tcf7l1,S,141,P,likely_benign,0.1508,VUS mid)
+tcf7l1,S,160,T,likely_benign,0.0679,benign
+tcf7l1,L,248,I,likely_benign,0.2646,VUS (mid)
+tcf7l1,P,253,S,likely_benign,0.1489,benign
+tcf7l1,G,533,R,likely_benign,0.2344,benign
+tcf7l1,Q,538,H,likely_benign,0.0949,VUS (mid)
