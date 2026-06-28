@@ -97,8 +97,9 @@ DDG_DESTAB = 1.0
 DDG_HIGHLY = 2.0
 AM_STRICT  = {"likely_pathogenic"}
 AM_RELAXED = {"likely_pathogenic", "ambiguous"}
-FRANKLIN_STRICT  = {"pathogenic", "likely_pathogenic", "vus_high"}
-FRANKLIN_RELAXED = {"pathogenic", "likely_pathogenic", "vus_high", "vus_mid"}
+FRANKLIN_PATHONLY = {"pathogenic", "likely_pathogenic"}                         # no VUS counted
+FRANKLIN_STRICT   = {"pathogenic", "likely_pathogenic", "vus_high"}             # + VUS(high)
+FRANKLIN_RELAXED  = {"pathogenic", "likely_pathogenic", "vus_high", "vus_mid"}  # + VUS(high,mid)
 FOOTPRINT_TIERS = {"Tier 1", "Tier 2"}
 LOW_PLDDT_CUTOFF = 70.0
 HIGH_SD_CUTOFF = 1.0
@@ -242,6 +243,12 @@ def discover_partners(df):
 def normalize_franklin(v):
     if pd.isna(v): return ""
     s = str(v).strip().lower()
+    # Robustly canonicalize VUS regardless of spacing/parenthesis style:
+    # "vus (mid)", "vus(mid)", "vus mid)", "vus mid", "vus_mid" -> "vus_mid"
+    if s.startswith("vus"):
+        for _lvl in ("low", "mid", "high"):
+            if _lvl in s:
+                return f"vus_{_lvl}"
     canon = {
         "benign": "benign", "likely benign": "likely_benign", "likely_benign": "likely_benign",
         "vus (low)": "vus_low", "vus_low": "vus_low", "vus low": "vus_low",
@@ -558,6 +565,12 @@ def franklin_votes(row):
     return (1 if fr in FRANKLIN_STRICT else 0, 1 if fr in FRANKLIN_RELAXED else 0)
 
 
+def franklin_pathonly_vote(row):
+    # Conservative Franklin: pathogenic / likely_pathogenic only, no VUS counted.
+    fr = normalize_franklin(row.get("franklin"))
+    return 1 if fr in FRANKLIN_PATHONLY else 0
+
+
 def axis_evaluable(row):
     return {
         "struct":   bool(row.get("structure_evaluable", True)),
@@ -586,14 +599,22 @@ def compute_concordance(row, tier_val, prefix="", include_external=True):
 
     strict_n,  strict_d  = assemble(fp_v, ddg_s, am_s, fr_s)
     relaxed_n, relaxed_d = assemble(fp_v, ddg_r, am_r, fr_r)
+    # Pathogenic-only Franklin: identical to strict, but Franklin counts
+    # pathogenic/likely_pathogenic only (no VUS). Emits a VUS-excluded
+    # concordance alongside strict (+VUS high) and relaxed (+VUS high,mid).
+    fr_p = franklin_pathonly_vote(row)
+    pathonly_n, pathonly_d = assemble(fp_v, ddg_s, am_s, fr_p)
     suffix = "full" if include_external else "struct"
     return {
-        f"{prefix}concordance_strict_{suffix}":  f"{strict_n}/{strict_d}" if strict_d else "NA",
-        f"{prefix}concordance_relaxed_{suffix}": f"{relaxed_n}/{relaxed_d}" if relaxed_d else "NA",
-        f"{prefix}concordance_strict_{suffix}_n":     strict_n,
-        f"{prefix}concordance_strict_{suffix}_denom": strict_d,
-        f"{prefix}concordance_relaxed_{suffix}_n":    relaxed_n,
-        f"{prefix}concordance_relaxed_{suffix}_denom":relaxed_d,
+        f"{prefix}concordance_strict_{suffix}":   f"{strict_n}/{strict_d}" if strict_d else "NA",
+        f"{prefix}concordance_relaxed_{suffix}":  f"{relaxed_n}/{relaxed_d}" if relaxed_d else "NA",
+        f"{prefix}concordance_pathonly_{suffix}": f"{pathonly_n}/{pathonly_d}" if pathonly_d else "NA",
+        f"{prefix}concordance_strict_{suffix}_n":      strict_n,
+        f"{prefix}concordance_strict_{suffix}_denom":  strict_d,
+        f"{prefix}concordance_relaxed_{suffix}_n":     relaxed_n,
+        f"{prefix}concordance_relaxed_{suffix}_denom": relaxed_d,
+        f"{prefix}concordance_pathonly_{suffix}_n":     pathonly_n,
+        f"{prefix}concordance_pathonly_{suffix}_denom": pathonly_d,
     }
 
 
