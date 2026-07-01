@@ -56,9 +56,11 @@ prepare_chd_input.py     builds CHD variant input
 configs/                 YAML systems configs (chd + benchmark worked examples)
 benchmark_variants_v5.csv, chd_input_final.csv   variant inputs
 inputs/                  cached intermediates for the no-FoldX self-test + AM table
-reference_outputs/       canonical result files (this study's outputs)
+reference_outputs/       canonical result files: comprehensive CSVs, collapsed CHD,
+                          plus MAVIS_results_summary.xlsx (11-sheet overview) + .docx narrative
 data/                    reference inputs (UniProt domain ranges, variant–domain map)
-docs/                    canonical benchmark ledger, results synthesis, methods, design notes
+docs/                    benchmark ledger, results synthesis, methods, design notes,
+                          CHECKPOINT_pre_publication.md
 verification/            self-test that reproduces the headline metrics
 examples/                getting started
 ```
@@ -143,7 +145,6 @@ On the 44-variant / 11-PPI-system benchmark (Pipeline 1, t = 2.5, pLDDT-reconcil
 |---|---|
 | structural_agreement | **0.77** (threshold sweep 0.76–0.80) |
 | mech_consistency | **0.73** (pLDDT-reconciled; 0.70 raw) |
-| directional agreement (strict / relaxed) | 0.773 / 0.757 |
 
 Pipeline 1 (Grantham severity × contact count, **no ΔΔG term**) is a calibrated
 structural-evidence-**strength** gradient that complements — rather than competes

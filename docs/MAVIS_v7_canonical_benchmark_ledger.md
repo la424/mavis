@@ -27,7 +27,7 @@ ledger is a core deliverable, not hygiene.
 - Disruptor tokens (destab/stab/mild_destab): **39 → 26** (a third removed as ungroundable or
   wrong-direction).
 - Roles reassigned: **11** (mech-control retirement).
-- **structural_agreement essentially unchanged (0.775 → 0.773 @ t2.5):** the benchmark was corrected
+- **structural_agreement essentially unchanged (thresholded 0.77 @ t=2.5; the directional 0.773 is superseded — not reproducible from released columns, see §6):** the benchmark was corrected
   without moving the headline — the prior number was right for partly-wrong reasons, now right for
   right reasons.
 
@@ -65,10 +65,9 @@ Promotions: 6 (1 destab, 5 neutral), all COUPLED-class. Conservative by design.
 
 ## 6. Locked headline metrics (Pipeline 1, t=2.5, pLDDT-reconciled)
 - **structural_agreement (strict, thresholded sweep):** 0.77 @ t2.5 (range 0.76–0.80).
-- **structural_agreement (directional, 1.0 floor):** strict 0.757... → reported as the common ruler
-  for the strict/relaxed comparison: **strict 0.773 (51/66) / relaxed 0.757 (53/70).**
+- **structural_agreement (directional, 1.0 floor) — SUPERSEDED:** the ledger’s strict 0.773 (51/66) / relaxed 0.757 (53/70) are **not reproducible from the released `mavis_v7_concordance_annotated.csv`** (the denominator counts axes per-partner for multi-chain systems plus the §5 pLDDT exclusions; reconstructions bracket 0.79–0.82). Report the thresholded 0.77 as the primary `structural_agreement`; the directional is omitted from the release unless regenerated from the grading script with its axis convention documented.
 - **mech_consistency:** 0.70 raw → **0.73 pLDDT-reconciled** @ t2.5.
-- **Pipeline 2:** pending local run (see runbook).
+- **Pipeline 2:** graded locally — mech_consistency identical to P1 (both 0.698 raw), so the neighborhood pipeline adds no mechanism resolution; the neighborhood tier degrades the pathogenicity gradient (tier OR 6.48 → 4.00; neighborhood-elevated subset anti-enriched, OR 0.26) → tested-and-rejected alternative. (The earlier ledger figure “OR 0.48” does not reproduce under either natural 2×2 and is superseded by these.)
 
 ## 7. Per-system one-liners (mechanism character)
 - **MLH1-PMS2** (Kosinski): mixed; L749P fold→unknown corrected.
@@ -95,7 +94,7 @@ Promotions: 6 (1 destab, 5 neutral), all COUPLED-class. Conservative by design.
 ## 9. Artifacts (this session)
 - `mavis_v7_results_corrected_v2.csv` — strict tokens, post-recompute.
 - `mavis_v7_results_relaxed.csv` — adds parallel `expected_ddg_*_relaxed` columns.
-- `mavis_v7_concordance_v5_reconciled.csv` — P1 mech_consistency raw + pLDDT-reconciled, all thresholds.
+- `mavis_v7_concordance_annotated.csv` (released canonical name; formerly `mavis_v7_concordance_v5_reconciled.csv` — confirmed the same artifact: the reconciled file is absent from disk and the annotated file carries the full raw + pLDDT-reconciled mech_consistency columns across all thresholds) — P1 mech_consistency raw + pLDDT-reconciled, all thresholds.
 - `batch12_recompute_bundle.py`, `mech_consistency_plddt_patch.py`, `relaxed_regrounding_walk.py` —
   the auditable edit/grade/promotion logic.
 - Reports: Batch-12 cross-system, Track-B mech_consistency, reconciliation summary, P2 runbook,
