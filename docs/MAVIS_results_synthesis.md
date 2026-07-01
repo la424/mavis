@@ -48,17 +48,18 @@ The machinery and the central theme both validate. mech_consistency 0.70 (raw) /
 144 variants — **11 ZIC3 zinc-finger known-pathogenic controls + 133 patient-population variants** — across 10 per-pairing systems (SHROOM3 × {actin, dvl2, ctnnb1, rock2, cdh2}; ZIC3 × {gli3, kpna1, kpna6, mdfi, tcf7l1}), bidirectionally scored, four-way concordance collapsed to one row per variant. The 11 controls are fully citation-matched.
 
 ### Results
-- **[V] Collapsed concordance reproduces the ledger exactly:** 45 evaluable (4/4 = 5, 3/4 = 10, 2/4 = 5, 1/4 = 10, 0/4 = 15), 99 unevaluable.
+- **[V] Collapsed concordance (after the AlphaMissense parse correction):** 45 evaluable (4/4 = 6, 3/4 = 10, 2/4 = 4, 1/4 = 10, 0/4 = 15), 99 unevaluable. The correction moved KPNA6 I498T (3/4 → 4/4) and K424N (2/4 → 3/4); all other collapsed hit counts are unchanged from the pre-correction ledger.
 - **[V] Control validation:** structure axis fires on **8/9** evaluable controls, ddG on **7/9**; H286R is the only full structural miss (NLS/trafficking mechanism — correctly silent, 2/4 external-only). Concordance: 4/4 — C253S, C297F, H318N, T323M, K405E; 3/4 — H281Y, R350G, S402P; 2/4 — H286R; out-of-scope (disordered, pLDDT < 30) — P217A (0/2), A447G (1/2).
-- **[V] Patient candidates:** seven at 3/4, **none at 4/4**. The seven miss *different* channels:
+- **[V] Patient candidates:** eight, with **KPNA6 I498T now at 4/4** (all four channels agree) and seven at 3/4 that each miss a *different* channel:
 
   | candidate | structure | ddG | AM | Franklin | missing | reading |
   |---|---|---|---|---|---|---|
+  | KPNA6 I498T | ✓ | ✓ | ✓ | ✓ | — (4/4) | all four channels agree; AM restored by the parse fix |
   | DVL2 D441Y | ✓ | ✓ | ✓ | — | Franklin | clean novel candidate (clinically unannotated) |
   | SHROOM3 G35V | ✓ | ✓ | ✓ | — | Franklin | clean novel candidate |
   | SHROOM3 G60V | ✓ | ✓ | ✓ | — | Franklin | clean novel candidate |
-  | KPNA6 I498T | ✓ | ✓ | — | ✓ | AM | structurally + clinically flagged, AM-discordant |
   | ROCK2 T367M | ✓ | ✓ | — | ✓ | AM | structurally + clinically flagged, AM-discordant |
+  | KPNA6 K424N | ✓ | — | ✓ | ✓ | ddG | AM-corrected; structure + AM + Franklin agree, ΔΔG sub-threshold |
   | CTNNB1 R151C | ✓ | — | ✓ | ✓ | ddG | caught by the structure tier, ΔΔG sub-threshold |
   | CTNNB1 T297M | ✓ | — | ✓ | ✓ | ddG | caught by the structure tier, ΔΔG sub-threshold |
 
@@ -69,7 +70,7 @@ The machinery and the central theme both validate. mech_consistency 0.70 (raw) /
 ### Interpretation
 The multimer integration delivers where it should. K405E and S402P are real zic3–gli3 interface variants the pipeline catches *at* the interface (K405E is monomer-neutral, ddg_monomer ≈ 0, yet a genuine 4-contact interface disruptor) — exactly the effect a monomer-only analysis misses. Evaluability is genuinely max-based, and it credits fold-upon-binding (the two SHROOM3 rescues). The control recovery (8/9) leans on the coordination-agnostic structure axis rather than ΔΔG, which is a stronger argument for the multi-channel design than a clean ΔΔG result would be.
 
-The reframe that matters most: **"no patient at 4/4" is not a shortfall.** 4/4 requires Franklin/clinical agreement, and a genuinely novel candidate is not yet classified — so the three Franklin-missing variants (DVL2 D441Y, SHROOM3 G35V/G60V) are the cleanest novel candidates, the two AM-missing variants (KPNA6 I498T, ROCK2 T367M) are structurally and clinically flagged but AM-discordant, and the two ddG-missing variants (CTNNB1 R151C/T297M) were caught by the structure tier where the ΔΔG fell short. Roughly 69% of the patient cohort (the 99 unevaluable) is structurally inaccessible, so for those variants interpretation rests entirely on AM/Franklin; the structural arm's power lives in the ordered zinc-finger and interface regions.
+The standout candidate: **KPNA6 I498T reaches 4/4** — structure, ΔΔG, AM, and Franklin all converge — once the AlphaMissense parse error is corrected (the AM score had been mis-loaded into the class column across the entire gene, silently zeroing the AM hit). Recovering it is itself a small methods-rigor result: an annotation-pipeline bug was masking a fully-concordant candidate. The remaining seven each miss a *different* channel, which is the more informative pattern — the three Franklin-missing variants (DVL2 D441Y, SHROOM3 G35V/G60V) are the cleanest genuinely-novel candidates (clinically unannotated, so no Franklin hit yet); ROCK2 T367M is structurally and clinically flagged but AM-discordant (AM calls it benign at 0.07 against Tier-1 structure+ΔΔG agreement), the single clearest MAVIS-vs-AM disagreement; and the ddG-missing variants (KPNA6 K424N, CTNNB1 R151C/T297M) were caught by the structure tier where the ΔΔG fell short. Note the threshold dependence: I498T’s 4/4 counts its VUS(high) Franklin as a hit; under strict pathogenic-only Franklin the novel candidates stay at 3/4, since a VUS is not yet a clinical classification. Roughly 69% of the patient cohort (the 99 unevaluable) is structurally inaccessible, so for those variants interpretation rests entirely on AM/Franklin; the structural arm's power lives in the ordered zinc-finger and interface regions.
 
 ---
 
@@ -124,7 +125,7 @@ The reframe that matters most: **"no patient at 4/4" is not a shortfall.** 4/4 r
 | Neighborhood specific OR = 0.48 | **[F]** | unmatched (tier OR 4.00, elevated-subset OR 0.26); exact 2×2 needs pinning |
 | CHD 45 evaluable, 5/10/5/10/15; 99 unevaluable | **[V]** | collapse from FIXED CSV |
 | CHD controls 8/9 structure, 7/9 ddG | **[V]** | per-control vote collapse |
-| CHD 7 candidates at 3/4, none 4/4; channel split | **[V]** | per-candidate vote breakdown |
+| CHD 8 candidates: KPNA6 I498T at 4/4 (AM-corrected), seven at 3/4; channel split | **[V]** | per-candidate vote breakdown |
 | Evaluability = max(monomer, multimer) ≥ 50 | **[V]** | best_plddt = max(...); clean separation at 50; 2 fold-on-binding rescues |
 | 99 unevaluable disordered in all contexts | **[V]** | best multimer pLDDT ≤ 45 |
 | ZIC3 monomer is zinc-free AlphaFold-3 | **[V]** | no ZN/HETATM in structure; AF3 Server provenance |
